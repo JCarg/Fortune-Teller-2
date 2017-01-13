@@ -1,1 +1,6 @@
 c:\users\jcarg\documents\visual studio 2015\Projects\Fortune-Teller 2\Fortune-Teller 2\bin\Debug\Fortune-Teller 2.exe.config
+c:\users\jcarg\documents\visual studio 2015\Projects\Fortune-Teller 2\Fortune-Teller 2\bin\Debug\Fortune-Teller 2.exe
+c:\users\jcarg\documents\visual studio 2015\Projects\Fortune-Teller 2\Fortune-Teller 2\bin\Debug\Fortune-Teller 2.pdb
+c:\users\jcarg\documents\visual studio 2015\Projects\Fortune-Teller 2\Fortune-Teller 2\obj\Debug\Fortune-Teller 2.csprojResolveAssemblyReference.cache
+c:\users\jcarg\documents\visual studio 2015\Projects\Fortune-Teller 2\Fortune-Teller 2\obj\Debug\Fortune-Teller 2.exe
+c:\users\jcarg\documents\visual studio 2015\Projects\Fortune-Teller 2\Fortune-Teller 2\obj\Debug\Fortune-Teller 2.pdb
