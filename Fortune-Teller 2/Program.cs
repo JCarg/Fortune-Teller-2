@@ -15,38 +15,94 @@ namespace Fortune_Teller_2
 
             //              Name Info
             Console.WriteLine("What is your first name? Type answers below.");
-            string firstname = Console.ReadLine();
+            string firstname = (Console.ReadLine()).ToLower();        
+            quit(firstname);
             Console.WriteLine("\nWhat is your last name?");
-            string lastname = Console.ReadLine();
+            string lastname = (Console.ReadLine()).ToLower();
+            quit(lastname);
+            
+            
+
+            
+
             greetingsname(firstname, lastname);
 
             //              Age Info
             Console.WriteLine("\nWhat is your age?");
             int age = int.Parse(Console.ReadLine());
 
+            //              Sibling Info
+            Console.WriteLine("\nWhat is your birth month? Ex: October = 10");
+            int siblings = int.Parse(Console.ReadLine());
+
+            //
+
+
 
         }
-        //              Name Method
+        //              Greetings Method
         static void greetingsname(string firstname, string lastname)
         {
             Console.WriteLine("Greetings " + firstname + " " + lastname + "! I will tell you your future./a");
         }
 
-        //              Age Method
+        //              Retirement Method
         static int retirementage(int age)
         {
-            string years = " ";
-            string ageodd = "800 Years";
-            string ageeven = "5 years";
+            int years;
+            string ageodd = "800";
+            string ageeven = "5";
             if (age % 2 > 0)
             {
-                years = ageodd;
+                years = int.Parse(ageodd);
             }
             else
             {
-                years = ageeven;
+                years = int.Parse(ageeven);
             }
+            return (years);
         }
 
+        //              Vacation Home Method 
+        static string vacationhome(int siblings)
+        {
+            string oddsib = "The Arctic Circle";
+            string vacation = "";
+            switch (siblings)
+            {
+                case 0:
+                    string nosib = "Ancient Rome";
+                    vacation = nosib;
+                    break;
+                case 1:
+                    string onesib = "the crab nebula";
+                    vacation = onesib;
+                    break;
+                case 2:
+                    string twosib = "a Deserted Alley";
+                    vacation = twosib;
+                    break;
+                case 3:
+                    string threesib = "the Center of the Earth";
+                    vacation = threesib;
+                    break;
+                default:
+                    vacation = oddsib;
+                    break;
+            }
+            return (vacation);
+        }
+       
+        //              Quit environment.quit{0}
+        static void quit(string exit)
+        {
+            if (exit=="quit")
+            {
+                Environment.Exit(0);
+            }
+
+        }
+
+                
     }
 }
