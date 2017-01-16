@@ -22,57 +22,6 @@ namespace Fortune_Teller_2
 
         }
 
-        //              Restart
-        static void restart()
-        {
-            {
-                Console.WriteLine("Welcome to the most accurate virtual fortune telling system on the web.");
-                Console.WriteLine("Let's Begin!\a");
-
-                //              Name Info
-                Console.WriteLine("What is your first name? Type answers below.");
-                string firstname = (Console.ReadLine()).ToLower();
-               
-
-                Console.WriteLine("\nWhat is your last name?");
-                string lastname = (Console.ReadLine()).ToLower();
-                greetingsname(firstname, lastname);
-
-                //              Age Info
-                Console.WriteLine("\nWhat is your age?");
-                int age = int.Parse(Console.ReadLine());
-                age.ToString();
-
-                //if(((age.ToString()).ToLower)=="quit")
-                //{
-                //    age = (age.ToString());
-                //    quit.
-                //}
-
-                int retirement = retirementage(age);
-
-                //              Sibling Info
-                Console.WriteLine("\nHow many siblings do you have?");
-                int siblings = int.Parse(Console.ReadLine());
-                string vacation = vacationhome(siblings);
-
-                //              Favorite Color Info
-                Console.WriteLine("\nWhat is your favorite ROYGBIV color?");
-                Console.WriteLine("If you would a list of ROYGBIV colors type help.");
-                string color = Console.ReadLine();
-                color = color.ToLower();
-                string transport = transportation(color);
-
-
-
-                //              Birth Month Info
-                Console.WriteLine("\nWhat is your birth month? Ex: October = 10");
-                int birthmonth = int.Parse(Console.ReadLine());
-
-                Console.Write(firstname + " " + lastname + " will retire in " + retirement + " with $" + birthmonth + " in the bank, a vacation home in " + vacation + " and a " + transport + "\n for transportation.\a\n");
-            }
-        }
-
         static void Main()
         {
             Console.WriteLine("Welcome to the most accurate virtual fortune telling system on the web.");
@@ -99,8 +48,10 @@ namespace Fortune_Teller_2
 
             //              Sibling Info
             Console.WriteLine("\nHow many siblings do you have?");
-            int siblings = int.Parse(Console.ReadLine());
-            string vacation = vacationhome(siblings);
+            string siblings = Console.ReadLine();
+            quitandrestart(siblings);          
+            int siblingsconvert = int.Parse(siblings);
+            string vacation = vacationhome(siblingsconvert);
             vacation.ToLower();
 
 
@@ -109,6 +60,7 @@ namespace Fortune_Teller_2
             Console.WriteLine("\nWhat is your favorite ROYGBIV color?");
             Console.WriteLine("If you would a list of ROYGBIV colors type help.");
             string color = Console.ReadLine();
+            quitandrestart(color);
             color = color.ToLower();
             string transport=transportation(color);
             
@@ -116,10 +68,11 @@ namespace Fortune_Teller_2
 
             //              Birth Month Info
             Console.WriteLine("\nWhat is your birth month? Ex: October = 10");
-            int birthmonth = int.Parse(Console.ReadLine());
-
-            Console.Write(firstname + " " + lastname + " will retire in " + retirement + " with $" + birthmonth + " in the bank, a vacation home in " + vacation + " and a " + transport + "\n for transportation.\a\n");
-
+            string birthmonth = Console.ReadLine().ToLower();
+            quitandrestart(birthmonth);
+            int birthmonthconvert = int.Parse(birthmonth);
+            double bank=bankroll(birthmonthconvert);
+            Console.Write(firstname + " " + lastname + " will retire in " + retirement + " with $" + bank + " in the bank, a vacation home in " + vacation + " and a " + transport + "\n for transportation.\a\n");
 
         }
         //              Greetings Method
@@ -184,6 +137,7 @@ namespace Fortune_Teller_2
                 Console.WriteLine("\nWhat is your favorite ROYGBIV color?");
                 string helpcolor = Console.ReadLine();
                 color = helpcolor.ToLower();
+                quitandrestart(color);
                 switch (color)
                 {
                     case ("red"):
@@ -215,6 +169,7 @@ namespace Fortune_Teller_2
                         color = violettransportation;
                         break;
                 }
+                quitandrestart(color.ToLower());
 
             }
             switch (color)
