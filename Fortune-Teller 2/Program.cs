@@ -76,7 +76,7 @@ namespace Fortune_Teller_2
             quitandrestart(birthmonth);
             int birthmonthconvert = int.Parse(birthmonth);
             double bank = bankroll(birthmonthconvert);
-            Console.Write(firstname + " " + lastname + " will retire in " + retirement + "years with $" + bank + " in the bank, a vacation home in " + vacation + " and " + transport + " for transportation.\a\n");
+            Console.Write(firstname + " " + lastname + " will retire in " + retirement + "years with $" + bank + " in the bank, a vacation home in " + vacation + " and " + transport + " for \ntransportation.\a\n");
             fortuneassessment();
 
         }
